@@ -1,0 +1,39 @@
+<div class="container" >
+    <div class="form">
+        <form action="#">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" placeholder="搜索菜品名称和原料..." >
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+        </form>
+        <!--定制样式的列表组-->
+        <!--<div class="list-group">-->
+            <!--<a href="#" class="list-group-item active">-->
+                <!--<h4 class="list-group-item-heading">List group item heading</h4>-->
+                <!--<p class="list-group-item-text">...</p>-->
+            <!--</a>-->
+        <!--</div>-->
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="e in empList" ng-click="loadDetail()">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="img/{{e.img}}" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">【{{e.title}}】</h4>
+                    <p style="font-size: 13px;">{{e.ptext}}</p>
+                    <hr style="margin: 0 0 5px 0"/>
+                    <span class="text-danger">{{e.price|currency:'￥'}}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <button class="btn btn-success btn-block hi{{hide}}"  ng-click="loadData()" style="margin-bottom: 60px;">加载更多</button>
+    <div class="alert alert-warning alert-dismissible textsh{{textshow}}" role="alert" style="margin-bottom: 60px;">
+        <strong><span class="glyphicon glyphicon-alert"></span></strong> 没有更多数据了！
+    </div>
+</div>

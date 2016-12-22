@@ -1,0 +1,31 @@
+<div class="container" >
+    <div class="panel panel-warning">
+        <div class="panel-heading" style="padding: 0;">
+            <ol class="breadcrumb" style="background-color: transparent;padding: 8px 15px;margin-bottom: 0;">
+                <li><a href="#/main">首页</a></li>
+                <li><a href="#/detail">详情</a></li>
+            </ol>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <h4>【{{deTail.title}}】</h4>
+                    <hr/>
+                    <img src="img/{{deTail.imgl}}" class="img-responsive"  alt=""/>
+                </div>
+                <div class="panel-heading">
+                    <p ng-bind="deTail.ptext"></p>
+                    <p ng-bind="deTail.text"></p>
+                    <hr/>
+                    <span class="text-danger">{{deTail.price|currency:'￥'}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-heading">
+            <div class="text-right">
+                <button class="btn btn-success" ng-click="dClick()">我要订餐</button>
+                <button class="btn btn-warning" ng-click="detailClick()">我再看看</button>
+            </div>
+        </div>
+    </div>
+</div>

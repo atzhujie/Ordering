@@ -1,0 +1,26 @@
+<div class="container" >
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">联系人:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <p style="font-weight: bold">性别:</p>
+            <input type="radio" name="sex" class="form-inline" id="Radio1">
+            <label for="Radio1">先生</label>
+            <input type="radio" name="sex" class="form-inline" id="Radio2">
+            <label for="Radio2">女士</label>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">联系电话:</label>
+            <input type="number" max="11" class="form-control" id="exampleInputPassword1" placeholder="请输入手机号码">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText">送餐地址:</label>
+            <textarea class="form-control" rows="3" id="exampleInputText" placeholder="请输入送餐地址">
+
+            </textarea>
+        </div>
+        <button type="submit" class="btn btn-block btn-success" ng-click="orderClick()">确定下单</button>
+    </form>
+</div>
